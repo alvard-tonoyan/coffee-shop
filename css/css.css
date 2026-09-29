@@ -1,0 +1,188 @@
+
+
+body {
+    background-color: var(--light-beige);
+    font-family: 'Georgia', serif;
+    color: var(--dark-coffee);
+}
+
+
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1500') center/cover;
+    position: relative;
+}
+
+.hero-content {
+    height: 100%;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+
+.section-title {
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--dark-coffee);
+}
+
+
+.coffee-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-10px);
+}
+
+.coffee-card img {
+    border-radius: 5px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-coffee {
+    background-color: var(--dark-coffee);
+    color: white;
+    border-radius: 20px;
+    padding: 8px 25px;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-coffee:hover {
+    background-color: var(--coffee-accent);
+    color: white;
+}
+
+
+
+
+
+@import url("https://unpkg.com/papercss@1.9.2/dist/paper.css") layer(csspaper);
+
+.card-list:has(li:hover) li:not(:hover) {
+  filter: blur(4px)
+}
+
+/* Demo style */
+body {
+  min-height: 100vh;
+  background-color: #f6eee3;
+  background-size: 20px 20px;
+  background-image:  repeating-linear-gradient(0deg, #e5decf, #e5decf 1px, #f6eee3 1px, #f6eee3);
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin: 0 0 2rem;  
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  transition: all 150ms ease-in-out;
+}
+
+li::before {
+  content: "";
+}
+
+img {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  margin-bottom: .6rem;
+}
+
+a {
+  background: none;
+}
+
+.paper {
+  padding: 1.5rem;
+}
+
+li a {
+  padding-inline-start: 1rem;
+}
+
+.liquid-morph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+ 
+}
+
+.liquid-morph-element {
+  width: 250px;
+  height: 100px;
+  background: #8B0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.liquid-morph-element span {
+  color: #fff;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.liquid-morph-element::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100px;
+  background: conic-gradient(
+    #0ff 0deg, 
+    #841617 120deg, 
+    #0ff 240deg
+  );
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.liquid-morph-element:hover {
+  border-radius: 10px;
+  transform: rotate(15deg);
+}
+
+.liquid-morph-element:hover::before {
+  opacity: 0.5;
+  transform: scale(2);
+}
